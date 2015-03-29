@@ -1,0 +1,55 @@
+<!doctype html>
+<html ng-app="wordsApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Words</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app.css">
+  </head>
+  <body>
+
+    <div class="container" role="main" ng-controller="WordsController">
+      
+      <h1>Words</h1>
+
+      <form>
+        <div class="form-group">
+          <input type="text" class="form-control" ng-model="words" ng-change="mangle(words)">
+        </div>
+      </form>
+      
+      <div class="panel panel-default example-panel">
+        <div class="panel-body">
+          <p ng-cloak>{{reversed}}<p>
+        </div>
+      </div>
+
+      <div class="panel panel-default example-panel">
+        <div class="panel-body">
+          <p ng-cloak>{{uppercase}}<p>
+        </div>
+      </div>
+
+      <div class="panel panel-default example-panel">
+        <div class="panel-body">
+          <p ng-cloak>{{echo}}<p>
+        </div>
+      </div>
+    
+      <div class="panel panel-default example-panel">
+        <div class="panel-body">
+          <p ng-cloak>{{spaceless}}<p>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/3.5.0/lodash.min.js"></script>
+    <script src="underscore.string.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="app.js"></script>
+
+  </body>
+</html>
