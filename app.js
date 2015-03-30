@@ -19,10 +19,11 @@
     
       $scope.reversed = value.split('').reverse().join('');
       $scope.uppercase = value.toUpperCase();
-      $scope.echo = _.repeat(value, 3);
+      $scope.echo = _.repeat(value, 3, ' ');
       $scope.spaceless = value.replace(/\s+/g, '');
 
-      var chopped = _.chop(value, 3);
+      var chopped = value.replace(/\s+/g, '');
+      chopped = _.chop(chopped, 3);
       $scope.chopped = chopped.join(' ');
 
     };
