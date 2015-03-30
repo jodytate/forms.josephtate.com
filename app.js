@@ -22,6 +22,9 @@
       $scope.echo = _.repeat(value, 3);
       $scope.spaceless = value.replace(/\s+/g, '');
 
+      var chopped = _.chop(value, 3);
+      $scope.chopped = chopped.join(' ');
+
     };
 
     $scope.randomMangle = function randomMangle (value) {
