@@ -12,6 +12,22 @@
       
       <h1>Words</h1>
 
+      <h2>Random</h2>
+
+      <form>
+        <div class="form-group">
+          <input type="text" class="form-control" ng-model="otherWords" ng-change="randomMangle(otherWords)">
+        </div>
+      </form>
+
+      <div class="panel panel-default example-panel">
+        <div class="panel-body">
+          <p ng-cloak>{{random}}<p>
+        </div>
+      </div>
+
+      <h2>Variety</h2>
+
       <form>
         <div class="form-group">
           <input type="text" class="form-control" ng-model="words" ng-change="mangle(words)">
